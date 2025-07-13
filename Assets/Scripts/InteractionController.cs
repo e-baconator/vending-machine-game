@@ -36,7 +36,7 @@ public class InteractionController : MonoBehaviour
     {
         if (UnityEngine.InputSystem.Keyboard.current.eKey.wasPressedThisFrame && currentTargetedInteractable != null)
         {
-            currentTargetedInteractable.Interact();
+            currentTargetedInteractable.Interact(this);
         }
     }
 }
