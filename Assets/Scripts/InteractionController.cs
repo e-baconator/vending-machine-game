@@ -4,7 +4,7 @@ public class InteractionController : MonoBehaviour
 {
     [SerializeField] Camera playerCamera;
     [SerializeField] TMPro.TextMeshProUGUI interactionText;
-    [SerializeField] float interactionDistance = 5f;
+    [SerializeField] float interactionDistance = 3f;
     IInteractable currentTargetedInteractable;
 
     public void Update()
