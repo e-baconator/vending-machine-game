@@ -10,7 +10,7 @@ public class VMInteract : MonoBehaviour, IInteractable
 
     bool isOpen;
 
-    public void Interact()
+    public void Interact(InteractionController interactionController)
     {
         hinge.GetComponent<Animator>().enabled = true;
         if (isOpen)
