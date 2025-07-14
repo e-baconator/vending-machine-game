@@ -8,7 +8,7 @@ public class PhysicsPickup : MonoBehaviour, IPickupable
     [SerializeField] Vector3 pickupPositionOffset;
     public virtual string InteractMessage => objectInteractMessage;
 
-    string objectInteractMessage = "Press F to pick up";
+    string objectInteractMessage = "Press E to pick up";
 
     public virtual void Drop(PickupController pickupController)
     {
