@@ -26,6 +26,8 @@ public class OutlineSelection : MonoBehaviour
     private Transform selection;
     private RaycastHit raycastHit;
 
+    private ISelectable selectableObject;
+
     private int layerMask;
 
     private float rayDistance = 5f;
@@ -57,8 +59,8 @@ public class OutlineSelection : MonoBehaviour
                 {
                     Outline outline = highlight.gameObject.AddComponent<Outline>();
                     outline.enabled = true;
-                    highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.magenta;
-                    highlight.gameObject.GetComponent<Outline>().OutlineWidth = 7.0f;
+                    highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.yellow;
+                    highlight.gameObject.GetComponent<Outline>().OutlineWidth = 5.0f;
                 }
             }
             else
@@ -68,27 +70,36 @@ public class OutlineSelection : MonoBehaviour
         }
 
         // Selection
-        // if (UnityEngine.InputSystem.Mouse.current.)
-        // {
-        //     if (highlight)
-        //     {
-        //         if (selection != null)
-        //         {
-        //             selection.gameObject.GetComponent<Outline>().enabled = false;
-        //         }
-        //         selection = raycastHit.transform;
-        //         selection.gameObject.GetComponent<Outline>().enabled = true;
-        //         highlight = null;
-        //     }
-        //     else
-        //     {
-        //         if (selection)
-        //         {
-        //             selection.gameObject.GetComponent<Outline>().enabled = false;
-        //             selection = null;
-        //         }
-        //     }
-        // }
+        if (Mouse.current.leftButton.isPressed)
+        {
+            if (highlight)
+            {
+                //Debug.Log("Yes highlight");
+                if (selection != null)
+                {
+                    selection.gameObject.GetComponent<Outline>().enabled = false;
+                }
+                selection = raycastHit.transform;
+                selection.gameObject.GetComponent<Outline>().enabled = true;
+                highlight = null;
+
+                // my code
+                if (selection.gameObject.TryGetComponent<ISelectable>(out _))
+                {
+                    selectableObject = (ISelectable)selection.gameObject.GetComponent("ISelectable");
+                    selectableObject.Use();
+                }
+            }
+            else
+            {
+                //Debug.Log("No highlight");
+                if (selection)
+                {
+                    selection.gameObject.GetComponent<Outline>().enabled = false;
+                    selection = null;
+                }
+            }
+        }
     }
 
 }
