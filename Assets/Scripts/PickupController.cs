@@ -7,6 +7,11 @@ public class PickupController : MonoBehaviour
     IPickupable currentPickup;
     public bool HasPickup => currentPickup != null;
 
+    public void RemovePickup()
+    {
+        currentPickup = null;
+    }
+    
     public void GrabPickup(IPickupable newPickup)
     {
         currentPickup = newPickup;
