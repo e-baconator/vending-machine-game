@@ -1,9 +1,12 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SelectableShelf : MonoBehaviour, ISelectable
 {
     [SerializeField] Transform pickupHolder;
+
+    [SerializeField] TMPro.TextMeshProUGUI fullWarningText;
     private int numBottles;
     private int bottleCapacity = 4;
 
@@ -33,7 +36,7 @@ public class SelectableShelf : MonoBehaviour, ISelectable
         }
         else if (numBottles == bottleCapacity && pickupHolder.childCount != 0)
         {
-            // send a message to say the shelf is full
+            StartCoroutine(ShowWarningText());
         }
         else if (numBottles > 0 && pickupHolder.childCount == 0)
         {
@@ -47,5 +50,13 @@ public class SelectableShelf : MonoBehaviour, ISelectable
     void Start()
     {
         numBottles = 0;
+        fullWarningText.text = string.Empty;
+    }
+
+    IEnumerator ShowWarningText()
+    {
+        fullWarningText.text = "This shelf is full.";
+        yield return new WaitForSeconds(1.5f);
+        fullWarningText.text = string.Empty;
     }
 }

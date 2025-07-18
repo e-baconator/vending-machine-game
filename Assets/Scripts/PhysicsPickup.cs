@@ -41,7 +41,7 @@ public class PhysicsPickup : MonoBehaviour, IPickupable
 
     public virtual void Use()
     {
-        Debug.Log("Pickup used");
+        //Debug.Log("Pickup used");
     }
 
     void SetPhysicsValues(bool wasPickedUp)
