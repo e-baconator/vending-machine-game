@@ -32,6 +32,8 @@ public class OutlineSelection : MonoBehaviour
 
     private float rayDistance = 5f;
 
+    public float delayTime = 0.1f;
+
     void Start()
     {
         layerMask = LayerMask.GetMask("HighlightSlot");
@@ -69,12 +71,18 @@ public class OutlineSelection : MonoBehaviour
             }
         }
 
-        // Selection
+        if (Time.frameCount % 30 == 0) // Example: Execute every 10 frames
+        {
+            Invoke("OnClick", delayTime);
+        }
+    }
+
+    void OnClick()
+    {
         if (Mouse.current.leftButton.isPressed)
         {
             if (highlight)
             {
-                //Debug.Log("Yes highlight");
                 if (selection != null)
                 {
                     selection.gameObject.GetComponent<Outline>().enabled = false;
@@ -92,7 +100,6 @@ public class OutlineSelection : MonoBehaviour
             }
             else
             {
-                //Debug.Log("No highlight");
                 if (selection)
                 {
                     selection.gameObject.GetComponent<Outline>().enabled = false;
