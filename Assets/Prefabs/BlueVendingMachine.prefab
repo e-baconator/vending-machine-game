@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 6556374414282867342}
   - component: {fileID: 3545255416366925274}
   - component: {fileID: 4578908449457203124}
-  - component: {fileID: 3444720771930448188}
   - component: {fileID: 126882560119443531}
+  - component: {fileID: 3622698612727057828}
+  - component: {fileID: 3613894120003253850}
   m_Layer: 0
   m_Name: Hinge
   m_TagString: Untagged
@@ -251,7 +252,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2102
+  m_VersionIndex: 2108
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -333,28 +334,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660319401029606388}
   m_Mesh: {fileID: 0}
---- !u!64 &3444720771930448188
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660319401029606388}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!95 &126882560119443531
 Animator:
   serializedVersion: 7
@@ -377,6 +356,40 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3622698612727057828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660319401029606388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93919b9afc05a074085a15537e91d693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 126882560119443531}
+--- !u!65 &3613894120003253850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660319401029606388}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 10
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.8369234, y: 0.013456831, z: 2.6735923}
+  m_Center: {x: -0.013348047, y: 0.000010504825, z: -1.3028485}
 --- !u!1 &4585511262822964014
 GameObject:
   m_ObjectHideFlags: 0
@@ -12950,8 +12963,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1290163811171421385}
-  - component: {fileID: 9007067758407614457}
-  - component: {fileID: 8645869332291790850}
   m_Layer: 0
   m_Name: BlueVendingMachine
   m_TagString: Untagged
@@ -12980,40 +12991,6 @@ Transform:
   - {fileID: 4921508943470689365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &9007067758407614457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7370533433442961833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93919b9afc05a074085a15537e91d693, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hinge: {fileID: 1660319401029606388}
---- !u!65 &8645869332291790850
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7370533433442961833}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.37605, y: 4.64416, z: 1.8998785}
-  m_Center: {x: 0.20408382, y: 0.85245585, z: 0.75661224}
 --- !u!1 &7700408429838946691
 GameObject:
   m_ObjectHideFlags: 0
@@ -13112,7 +13089,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5677
+  m_VersionIndex: 5683
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -22591,7 +22568,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5683
+  m_VersionIndex: 5689
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
