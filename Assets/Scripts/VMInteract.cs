@@ -6,22 +6,22 @@ public class VMInteract : MonoBehaviour, IInteractable
 
     string objectInteractMessage;
 
-    [SerializeField] GameObject hinge;
+    [SerializeField] Animator animator;
 
     bool isOpen;
 
     public void Interact(InteractionController interactionController)
     {
-        hinge.GetComponent<Animator>().enabled = true;
+        animator.enabled = true;
         if (isOpen)
         {
-            hinge.GetComponent<Animator>().Play("VMDoorClose");
+            animator.Play("VMDoorClose");
             objectInteractMessage = "Press E to open";
             isOpen = false;
         }
         else
         {
-            hinge.GetComponent<Animator>().Play("VMDoorOpen");
+            animator.Play("VMDoorOpen");
             objectInteractMessage = "Press E to close";
             isOpen = true;
         }
@@ -31,6 +31,6 @@ public class VMInteract : MonoBehaviour, IInteractable
     {
         isOpen = false;
         objectInteractMessage = "Press E to open";
-        hinge.GetComponent<Animator>().enabled = false;
+        animator.enabled = false;
     }
 }
