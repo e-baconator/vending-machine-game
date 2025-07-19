@@ -6552,7 +6552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupRigidbody: {fileID: 873110687314056598}
   pickupCollider: {fileID: 7005958735107340530}
-  pickupPositionOffset: {x: 0, y: 0, z: 0}
+  pickupPositionOffset: {x: -0.1, y: 0.13, z: -0.279}
 --- !u!1 &9199568623294321052
 GameObject:
   m_ObjectHideFlags: 0
