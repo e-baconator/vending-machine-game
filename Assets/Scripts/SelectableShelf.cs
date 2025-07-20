@@ -6,7 +6,7 @@ public class SelectableShelf : MonoBehaviour, ISelectable
 {
     [SerializeField] Transform pickupHolder;
 
-    [SerializeField] TMPro.TextMeshProUGUI fullWarningText;
+    [SerializeField] TMPro.TextMeshProUGUI warningText;
 
     [SerializeField] string shelfID;
     private int numBottles;
@@ -57,13 +57,13 @@ public class SelectableShelf : MonoBehaviour, ISelectable
     void Start()
     {
         numBottles = 0;
-        fullWarningText.text = string.Empty;
+        warningText.text = string.Empty;
     }
 
     IEnumerator ShowWarningText(string message)
     {
-        fullWarningText.text = message;
+        warningText.text = message;
         yield return new WaitForSeconds(1.5f);
-        fullWarningText.text = string.Empty;
+        warningText.text = string.Empty;
     }
 }
