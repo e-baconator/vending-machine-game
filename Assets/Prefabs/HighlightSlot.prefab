@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3678915932665752973}
   - component: {fileID: 2586476878849235053}
   - component: {fileID: 4452247285655449632}
+  - component: {fileID: 9105167274654513227}
   m_Layer: 3
   m_Name: HighlightSlot
   m_TagString: Highlightable
@@ -248,7 +249,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4371
+  m_VersionIndex: 4374
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -352,3 +353,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &9105167274654513227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5924382889783102342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32838fac5dc07654a8f36db349807031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupHolder: {fileID: 0}
+  fullWarningText: {fileID: 0}

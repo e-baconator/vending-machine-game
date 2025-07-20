@@ -29,12 +29,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411923067521680508}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: -0.5}
-  m_LocalPosition: {x: -0.683, y: 0.258, z: 1.672}
-  m_LocalScale: {x: 2.47, y: 0.1, z: 2}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: -0.5}
+  m_LocalPosition: {x: 0.63921, y: -0.33448997, z: 0.012889838}
+  m_LocalScale: {x: 1.0620999, y: 0.001, z: 0.85999995}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1290163811171421385}
+  m_Father: {fileID: 3136755378987495832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8095324776701668397
 MonoBehaviour:
@@ -34142,7 +34142,7 @@ GameObject:
   - component: {fileID: 3620933664898485105}
   - component: {fileID: 7085175653183739648}
   m_Layer: 0
-  m_Name: DoorOutside (2)
+  m_Name: OutsideSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34157,11 +34157,11 @@ Transform:
   m_GameObject: {fileID: 1027244682199358327}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26274893, y: -0.836, z: 1.6714752}
+  m_LocalPosition: {x: 0, y: -1.7487587, z: 0.008000135}
   m_LocalScale: {x: 1, y: 0.36, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1290163811171421385}
+  m_Father: {fileID: 564273176633460616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6800449812113152202
 MonoBehaviour:
@@ -34741,6 +34741,39 @@ Transform:
   - {fileID: 2733296792182958474}
   m_Father: {fileID: 564273176633460616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2185564084487263138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3136755378987495832}
+  m_Layer: 0
+  m_Name: CoinSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3136755378987495832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2185564084487263138}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.54078627, y: 0.12312508, z: 0.038501024}
+  m_LocalScale: {x: 2.3255816, y: 2.3255816, z: 2.3255816}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3108849523344343309}
+  - {fileID: 7932894806372503388}
+  m_Father: {fileID: 564273176633460616}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2698462526381454059
 GameObject:
   m_ObjectHideFlags: 0
@@ -34774,6 +34807,8 @@ Transform:
   - {fileID: 467754326312758769}
   - {fileID: 2117481059989732277}
   - {fileID: 2911229602052752897}
+  - {fileID: 3136755378987495832}
+  - {fileID: 7973822808401582686}
   m_Father: {fileID: 4769889514681749318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4585511262822964014
@@ -47481,9 +47516,6 @@ Transform:
   - {fileID: 4551824707019392828}
   - {fileID: 4921508943470689365}
   - {fileID: 6261953446613315850}
-  - {fileID: 7932894806372503388}
-  - {fileID: 3108849523344343309}
-  - {fileID: 7973822808401582686}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &7414389211099879625
@@ -47515,12 +47547,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7414389211099879625}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: -0.5}
-  m_LocalPosition: {x: -1.04, y: 0.365, z: 1.672}
-  m_LocalScale: {x: 1.73, y: 0.07004049, z: 1.4008098}
-  m_ConstrainProportionsScale: 1
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: -0.5}
+  m_LocalPosition: {x: 0.7927201, y: -0.28847995, z: 0.012889838}
+  m_LocalScale: {x: 0.74389994, y: 0.01, z: 0.60234815}
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1290163811171421385}
+  m_Father: {fileID: 3136755378987495832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4909762831792516501
 MonoBehaviour:
@@ -81593,6 +81625,7 @@ GameObject:
   - component: {fileID: 6468528633575091588}
   - component: {fileID: 1803113612486721033}
   - component: {fileID: 499544754685469594}
+  - component: {fileID: 8993758601607394128}
   m_Layer: 0
   m_Name: DoorOutside
   m_TagString: Untagged
@@ -81792,6 +81825,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7700408429838946691}
   m_Mesh: {fileID: 0}
+--- !u!65 &8993758601607394128
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7700408429838946691}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.6402783, y: 3.7944179, z: 0.00000047683716}
+  m_Center: {x: 0.0000004172325, y: 0, z: 0.00000071525574}
 --- !u!1 &7797352674287453722
 GameObject:
   m_ObjectHideFlags: 0
@@ -100866,6 +100920,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: ef44ba08da76b0c4bb2726db7d1a06b9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: ef44ba08da76b0c4bb2726db7d1a06b9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: ef44ba08da76b0c4bb2726db7d1a06b9, type: 3}
       propertyPath: m_Name
       value: GreenTea (1)
@@ -100926,7 +100988,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: ef44ba08da76b0c4bb2726db7d1a06b9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -100944,6 +101007,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: fefaf1404134a7d4983733ed9a68f580, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: fefaf1404134a7d4983733ed9a68f580, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: fefaf1404134a7d4983733ed9a68f580, type: 3}
       propertyPath: m_Name
       value: Coffee1
@@ -101004,7 +101075,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: fefaf1404134a7d4983733ed9a68f580, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101022,6 +101094,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
       propertyPath: m_Name
       value: WaterBottle1
@@ -101082,7 +101162,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101100,6 +101181,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: 7589a30684bd1a448a9ca1a36b4cb5b9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: 7589a30684bd1a448a9ca1a36b4cb5b9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: 7589a30684bd1a448a9ca1a36b4cb5b9, type: 3}
       propertyPath: m_Name
       value: WaterBottle2 (1)
@@ -101160,7 +101249,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: 7589a30684bd1a448a9ca1a36b4cb5b9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101178,6 +101268,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: 7589a30684bd1a448a9ca1a36b4cb5b9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: 7589a30684bd1a448a9ca1a36b4cb5b9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: 7589a30684bd1a448a9ca1a36b4cb5b9, type: 3}
       propertyPath: m_Name
       value: WaterBottle2
@@ -101238,7 +101336,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: 7589a30684bd1a448a9ca1a36b4cb5b9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101256,6 +101355,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: fefaf1404134a7d4983733ed9a68f580, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: fefaf1404134a7d4983733ed9a68f580, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: fefaf1404134a7d4983733ed9a68f580, type: 3}
       propertyPath: m_Name
       value: Coffee1 (1)
@@ -101316,7 +101423,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: fefaf1404134a7d4983733ed9a68f580, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101334,6 +101442,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: ef44ba08da76b0c4bb2726db7d1a06b9, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: ef44ba08da76b0c4bb2726db7d1a06b9, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: ef44ba08da76b0c4bb2726db7d1a06b9, type: 3}
       propertyPath: m_Name
       value: GreenTea
@@ -101394,7 +101510,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: ef44ba08da76b0c4bb2726db7d1a06b9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101412,6 +101529,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: d3270368205a39f45b46c2a508a640a3, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: d3270368205a39f45b46c2a508a640a3, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: d3270368205a39f45b46c2a508a640a3, type: 3}
       propertyPath: m_Name
       value: Soda2
@@ -101472,7 +101597,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: d3270368205a39f45b46c2a508a640a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101490,6 +101616,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: 29f3d733756461841922146397b2eebc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: 29f3d733756461841922146397b2eebc, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: 29f3d733756461841922146397b2eebc, type: 3}
       propertyPath: m_Name
       value: Coffee2
@@ -101550,7 +101684,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: 29f3d733756461841922146397b2eebc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101568,6 +101703,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: 1fa6f7c024f024e4ba4f1d19972ac2a1, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: 1fa6f7c024f024e4ba4f1d19972ac2a1, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: 1fa6f7c024f024e4ba4f1d19972ac2a1, type: 3}
       propertyPath: m_Name
       value: PeachJuice
@@ -101628,7 +101771,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: 1fa6f7c024f024e4ba4f1d19972ac2a1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101646,6 +101790,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
       propertyPath: m_Name
       value: WaterBottle1 (1)
@@ -101706,7 +101858,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101724,6 +101877,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2911229602052752897}
     m_Modifications:
+    - target: {fileID: 873110687314056598, guid: c28149e829d5e37448951fc114fb2a45, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 873110687314056598, guid: c28149e829d5e37448951fc114fb2a45, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: c28149e829d5e37448951fc114fb2a45, type: 3}
       propertyPath: m_Name
       value: Soda1
@@ -101784,7 +101945,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6859723200752092405, guid: c28149e829d5e37448951fc114fb2a45, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
