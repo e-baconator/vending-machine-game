@@ -342,7 +342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7678425385415622191
 Transform:
   m_ObjectHideFlags: 0
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f088858bf29653b4e9c1df555de5f6bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxID: Soda1
+  boxID: Water1
   pickupHolder: {fileID: 0}
   warningText: {fileID: 0}
 --- !u!1001 &135113321978134048
@@ -989,6 +989,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 586872689578772578}
     m_Modifications:
+    - target: {fileID: 7005958735107340530, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
       propertyPath: m_Name
       value: Water1
@@ -1237,6 +1241,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 586872689578772578}
     m_Modifications:
+    - target: {fileID: 7005958735107340530, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7753574543274525449, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
       propertyPath: m_Name
       value: Water1

@@ -843,6 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxTop: {fileID: 7678425385415622191}
+  isOpen: 0
 --- !u!54 &2509402635507005728
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -889,8 +890,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25359607, y: 0.21289012, z: 0.3818331}
-  m_Center: {x: -0.024463773, y: 0.009858087, z: 0.015855893}
+  m_Size: {x: 0.25359607, y: 0.21598524, z: 0.3818331}
+  m_Center: {x: -0.024463773, y: 0.008310527, z: 0.015855893}
 --- !u!114 &494917652380884172
 MonoBehaviour:
   m_ObjectHideFlags: 0
