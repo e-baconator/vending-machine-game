@@ -7,7 +7,7 @@ public class BoxInteract : MonoBehaviour, IInteractable
 
     string boxInteractMessage;
 
-    bool isOpen;
+    public bool isOpen;
 
     public void Interact(InteractionController interactionController)
     {

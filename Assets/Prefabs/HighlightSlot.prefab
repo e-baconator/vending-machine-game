@@ -366,4 +366,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupHolder: {fileID: 0}
-  fullWarningText: {fileID: 0}
+  warningText: {fileID: 0}
+  shelfID: Water1
