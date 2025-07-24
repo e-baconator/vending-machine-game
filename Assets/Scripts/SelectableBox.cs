@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class SelectableBox : MonoBehaviour, ISelectable
 {
@@ -9,11 +10,20 @@ public class SelectableBox : MonoBehaviour, ISelectable
     [SerializeField] TMPro.TextMeshProUGUI warningText;
     private int bottleCapacity = 12;
     private int numBottles;
-    private static Vector3 slot1 = new Vector3(-0.096f, 0.022f, 0.153f);
+    private static Vector3 slot1 = new Vector3(-0.096f, 0.022f, -0.153f);
     private static Vector3 slot2 = new Vector3(-0.096f, 0.022f, -0.068f);
     private static Vector3 slot3 = new Vector3(-0.096f, 0.022f, 0.014f);
     private static Vector3 slot4 = new Vector3(-0.096f, 0.022f, 0.098f);
-    private List<Vector3> slots = new List<Vector3>() { slot1, slot2, slot3, slot4 };
+    private static Vector3 slot5 = new Vector3(-0.015f, 0.022f, -0.153f);
+    private static Vector3 slot6 = new Vector3(-0.015f, 0.022f, -0.068f);
+    private static Vector3 slot7 = new Vector3(-0.015f, 0.022f, 0.014f);
+    private static Vector3 slot8 = new Vector3(-0.015f, 0.022f, 0.098f);
+    private static Vector3 slot9 = new Vector3(0.064f, 0.022f, -0.153f);
+    private static Vector3 slot10 = new Vector3(0.064f, 0.022f, -0.068f);
+    private static Vector3 slot11 = new Vector3(0.064f, 0.022f, 0.014f);
+    private static Vector3 slot12 = new Vector3(0.064f, 0.022f, 0.098f);
+
+    private List<Vector3> slots = new List<Vector3>() { slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8, slot9, slot10, slot11, slot12};
     public string GetItemID()
     {
         return boxID;
@@ -28,9 +38,13 @@ public class SelectableBox : MonoBehaviour, ISelectable
 
     public void Use()
     {
-        if (numBottles > 0 && pickupHolder.childCount == 0)
+        if (!GetComponent<BoxInteract>().isOpen)
         {
-            Transform bottle = transform.GetChild(numBottles - 1);
+            StartCoroutine(ShowWarningText("Box must be opened first."));
+        }
+        else if (numBottles > 0 && pickupHolder.childCount == 0)
+        {
+            Transform bottle = transform.GetChild(numBottles + 1);
             bottle.parent = null;
             bottle.GetComponent<PhysicsPickup>().Grab(pickupHolder.GetComponentInParent<PickupController>());
             numBottles = numBottles - 1;
