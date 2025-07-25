@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class BoxInteract : MonoBehaviour, IInteractable
@@ -18,6 +20,16 @@ public class BoxInteract : MonoBehaviour, IInteractable
             boxTop.GetComponent<MeshRenderer>().enabled = false;
             boxTop.GetComponent<BoxCollider>().enabled = false;
         }
+        int initialChildCount = transform.childCount;
+        for (int child = 0; child < initialChildCount; child++)
+        {
+            PhysicsPickup script = transform.GetChild(child).GetComponent<PhysicsPickup>();
+            if (script != null)
+            {
+                //script.SetPhysicsValues(false);
+                transform.parent = null;
+            }
+        }
     }
 
     public void Start()
@@ -26,5 +38,13 @@ public class BoxInteract : MonoBehaviour, IInteractable
         isOpen = false;
         boxTop.GetComponent<MeshRenderer>().enabled = true;
         boxTop.GetComponent<BoxCollider>().enabled = true;
+        for (int child = 0; child < transform.childCount; child++)
+        {
+            PhysicsPickup script = transform.GetChild(child).GetComponent<PhysicsPickup>();
+            if (script != null)
+            {
+                script.SetPhysicsValues(true);
+            }
+        }
     }
 }

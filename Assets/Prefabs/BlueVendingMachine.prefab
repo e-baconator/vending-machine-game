@@ -101676,6 +101676,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterBottle1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7753574543274525449, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753574543274525449, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7786651687344449829, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.58
@@ -102719,6 +102727,14 @@ PrefabInstance:
     - target: {fileID: 7753574543274525449, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
       propertyPath: m_Name
       value: WaterBottle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753574543274525449, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753574543274525449, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7786651687344449829, guid: 7bdf463f8933f0d46aa450b65190f2eb, type: 3}
       propertyPath: m_LocalScale.x

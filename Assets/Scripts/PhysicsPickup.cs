@@ -51,23 +51,9 @@ public class PhysicsPickup : MonoBehaviour, IPickupable
         //Debug.Log("Pickup used");
     }
 
-    void SetPhysicsValues(bool wasPickedUp)
+    public void SetPhysicsValues(bool wasPickedUp)
     {
         pickupRigidbody.isKinematic = wasPickedUp;
         pickupCollider.enabled = !wasPickedUp;
-    }
-
-    void Start()
-    {
-        pickupRigidbody.isKinematic = true;
-        pickupCollider.enabled = false;
-        StartCoroutine(Setup());
-    }
-
-    IEnumerator Setup()
-    {
-        yield return new WaitForSeconds(0.5f);
-        pickupRigidbody.isKinematic = false;
-        pickupCollider.enabled = true;
     }
 }
