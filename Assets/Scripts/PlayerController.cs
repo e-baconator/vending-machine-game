@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.dKey.wasPressedThisFrame)
+        if (Keyboard.current.yKey.wasPressedThisFrame)
         {
             SetHappiness(-20f);
         }
