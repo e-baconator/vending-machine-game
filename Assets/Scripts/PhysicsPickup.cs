@@ -1,9 +1,9 @@
+using System.Collections;
 using UnityEngine;
 
 public class PhysicsPickup : MonoBehaviour, IPickupable
 {
     [SerializeField] Rigidbody pickupRigidbody;
-
     [SerializeField] Collider pickupCollider;
     [SerializeField] Vector3 pickupPositionOffset;
 
@@ -51,7 +51,7 @@ public class PhysicsPickup : MonoBehaviour, IPickupable
         //Debug.Log("Pickup used");
     }
 
-    void SetPhysicsValues(bool wasPickedUp)
+    public void SetPhysicsValues(bool wasPickedUp)
     {
         pickupRigidbody.isKinematic = wasPickedUp;
         pickupCollider.enabled = !wasPickedUp;
