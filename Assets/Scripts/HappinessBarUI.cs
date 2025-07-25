@@ -1,16 +1,20 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HappinessBarUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float Happiness, MaxHappiness, Width, Height;
+    [SerializeField] private RectTransform happinessBar;
+
+    public void SetMaxHappiness(float maxHappiness)
     {
-        
+        MaxHappiness = maxHappiness;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetHappiness(float happiness)
     {
-        
+        Happiness = happiness;
+        float newWidth = (Happiness / MaxHappiness) * Width;
+        happinessBar.sizeDelta = new Vector2(newWidth, Height);
     }
 }
