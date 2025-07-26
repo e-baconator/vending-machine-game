@@ -71,7 +71,7 @@ public class OutlineSelection : MonoBehaviour
             }
         }
 
-        if (Time.frameCount % 30 == 0) // Example: Execute every 10 frames
+        if (Time.frameCount % 30 == 0) // Example: Execute every 30 frames
         {
             Invoke("OnClick", delayTime);
         }
