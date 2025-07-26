@@ -25,9 +25,9 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _OutlineWidth: 5
+    - _OutlineWidth: 8
     - _ZTest: 8
     m_Colors:
-    - _OutlineColor: {r: 1, g: 0.940426, b: 0, a: 1}
+    - _OutlineColor: {r: 0.53, g: 0.81, b: 0.98, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
