@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private HappinessBarUI happinessBar;
     [SerializeField] TMPro.TextMeshProUGUI warningText;
     public float Happiness, MaxHappiness;
-    private List<string> collisionMessages = new List<string>() { "HEY, WATCH IT.", "WHAT DO YOU THINK YOU'RE DOING?", "GET OUT OF MY WAY." };
+    private List<string> collisionMessages = new List<string>() { "HEY, WATCH IT.", "WHAT DO YOU THINK YOU'RE DOING?", "GET OUT OF MY WAY." , "UGH, WHY ARE YOU HERE?"};
     void Start()
     {
         happinessBar.SetMaxHappiness(MaxHappiness);
@@ -35,13 +35,14 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("NPC"))
         {
             //Debug.Log("Player touched NPC!");
-            SetHappiness(-10f);
-            StartCoroutine(ShowWarningText(collisionMessages[Random.Range(0, collisionMessages.Count)]));
+            SetHappiness(-5f);
+            StartCoroutine(ShowText(collisionMessages[Random.Range(0, collisionMessages.Count)], Color.red));
         }
     }
 
-    IEnumerator ShowWarningText(string message)
+    public IEnumerator ShowText(string message, Color color)
     {
+        warningText.color = color;
         warningText.text = message;
         yield return new WaitForSeconds(1.5f);
         warningText.text = string.Empty;
