@@ -1,11 +1,13 @@
 using System.Collections;
+using System.Numerics;
 using UnityEngine;
 
 public class PhysicsPickup : MonoBehaviour, IPickupable
 {
     [SerializeField] Rigidbody pickupRigidbody;
     [SerializeField] Collider pickupCollider;
-    [SerializeField] Vector3 pickupPositionOffset;
+    [SerializeField] UnityEngine.Vector3 pickupPositionOffset;
+    [SerializeField] UnityEngine.Quaternion pickupRotationOffset;
 
     [SerializeField] string itemID;
     public virtual string InteractMessage => objectInteractMessage;
@@ -43,7 +45,7 @@ public class PhysicsPickup : MonoBehaviour, IPickupable
     {
         transform.parent = newParent;
         transform.localPosition = pickupPositionOffset;
-        transform.localRotation = Quaternion.identity;
+        transform.localRotation = pickupRotationOffset;
     }
 
     public virtual void Use()

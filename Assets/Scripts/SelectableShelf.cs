@@ -31,24 +31,57 @@ public class SelectableShelf : MonoBehaviour, ISelectable
 
     public void Use()
     {
-        if (numBottles > 0 && pickupHolder.childCount == 0)
+        // if (numBottles > 0 && pickupHolder.childCount == 0)
+        // {
+        //     Transform bottle = transform.GetChild(numBottles - 1);
+        //     bottle.parent = null;
+        //     bottle.GetComponent<PhysicsPickup>().Grab(pickupHolder.GetComponentInParent<PickupController>());
+        //     numBottles = numBottles - 1;
+        // }
+        // else if (!GetItemID().Equals(pickupHolder.GetChild(0).GetComponent<IPickupable>().GetItemID()))
+        // {
+        //     StartCoroutine(ShowWarningText("Wrong shelf for this bottle."));
+        // }
+        // else if (numBottles < bottleCapacity && pickupHolder.childCount != 0)
+        // {
+        //     SetChildPosition(pickupHolder.GetChild(0));
+        //     pickupHolder.GetComponentInParent<PickupController>().RemovePickup();
+        //     numBottles = numBottles + 1;
+        // }
+        // else if (numBottles == bottleCapacity && pickupHolder.childCount != 0)
+        // {
+        //     StartCoroutine(ShowWarningText("This shelf is full."));
+        // }
+
+        Transform box;
+
+        if (pickupHolder.childCount == 0) // no box held
         {
-            Transform bottle = transform.GetChild(numBottles - 1);
-            bottle.parent = null;
-            bottle.GetComponent<PhysicsPickup>().Grab(pickupHolder.GetComponentInParent<PickupController>());
-            numBottles = numBottles - 1;
+            return;
         }
-        else if (!GetItemID().Equals(pickupHolder.GetChild(0).GetComponent<IPickupable>().GetItemID()))
+        else //box held
+        {
+            box = pickupHolder.GetChild(0);
+        }
+
+        if (!GetItemID().Equals(box.GetComponent<IPickupable>().GetItemID())) //wrong box
         {
             StartCoroutine(ShowWarningText("Wrong shelf for this bottle."));
         }
-        else if (numBottles < bottleCapacity && pickupHolder.childCount != 0)
+        else if (numBottles < bottleCapacity) //space on shelf available
         {
-            SetChildPosition(pickupHolder.GetChild(0));
-            pickupHolder.GetComponentInParent<PickupController>().RemovePickup();
-            numBottles = numBottles + 1;
+            Transform bottlesInBox = box.Find("Bottles");
+            if (bottlesInBox.childCount == 0) //box has no bottles
+            {
+                StartCoroutine(ShowWarningText("This box is empty."));
+            }
+            else //box does have bottles
+            {
+                SetChildPosition(bottlesInBox.GetChild(bottlesInBox.childCount - 1));
+                numBottles = numBottles + 1;
+            }
         }
-        else if (numBottles == bottleCapacity && pickupHolder.childCount != 0)
+        else if (numBottles == bottleCapacity) //no space on shelf left
         {
             StartCoroutine(ShowWarningText("This shelf is full."));
         }

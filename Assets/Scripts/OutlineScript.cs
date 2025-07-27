@@ -51,19 +51,17 @@ public class OutlineSelection : MonoBehaviour
         if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit, rayDistance, layerMask))
         {
             highlight = raycastHit.transform;
-            if (highlight.CompareTag("Highlightable") && highlight != selection)
+            if (highlight.CompareTag("Highlightable") || highlight.CompareTag("Box"))
             {
-                if (highlight.gameObject.GetComponent<Outline>() != null)
+                Outline outline = highlight.GetComponent<Outline>();
+                if (outline == null)
                 {
-                    highlight.gameObject.GetComponent<Outline>().enabled = true;
+                    outline = highlight.gameObject.AddComponent<Outline>();
+                    outline.OutlineWidth = 8.0f;
                 }
-                else
-                {
-                    Outline outline = highlight.gameObject.AddComponent<Outline>();
-                    outline.enabled = true;
-                    highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.yellow;
-                    highlight.gameObject.GetComponent<Outline>().OutlineWidth = 5.0f;
-                }
+
+                outline.OutlineColor = Color.lightSkyBlue;
+                outline.enabled = true;
             }
             else
             {
