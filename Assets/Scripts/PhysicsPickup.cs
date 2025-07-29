@@ -12,7 +12,7 @@ public class PhysicsPickup : MonoBehaviour, IPickupable
     [SerializeField] string itemID;
     public virtual string InteractMessage => objectInteractMessage;
 
-    string objectInteractMessage = "Press E to pick up";
+    string objectInteractMessage = string.Empty;
 
     public string GetItemID()
     {
@@ -21,24 +21,24 @@ public class PhysicsPickup : MonoBehaviour, IPickupable
 
     public virtual void Drop(PickupController pickupController)
     {
-        transform.parent = null;
-        SetPhysicsValues(false);
+        // transform.parent = null;
+        // SetPhysicsValues(false);
     }
 
     public virtual void Grab(PickupController pickupController)
     {
-        if (pickupController == null || pickupController.HasPickup)
-        {
-            return;
-        }
-        pickupController.GrabPickup(this);
-        SetPhysicsValues(true);
+        // if (pickupController == null || pickupController.HasPickup)
+        // {
+        //     return;
+        // }
+        // pickupController.GrabPickup(this);
+        // SetPhysicsValues(true);
     }
 
     public void Interact(InteractionController interactionController)
     {
-        var pickupController = interactionController.GetComponent<PickupController>();
-        Grab(pickupController);
+        // var pickupController = interactionController.GetComponent<PickupController>();
+        // Grab(pickupController);
     }
 
     public void SetPositionInParent(Transform newParent)
