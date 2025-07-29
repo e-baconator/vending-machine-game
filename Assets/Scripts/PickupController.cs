@@ -26,11 +26,11 @@ public class PickupController : MonoBehaviour
 
     void CheckDropInput()
     {
-        if (Keyboard.current.qKey.wasPressedThisFrame && HasPickup)
-        {
-            currentPickup.Drop(this);
-            currentPickup = null;
-        }
+        // if (Keyboard.current.qKey.wasPressedThisFrame && HasPickup)
+        // {
+        //     currentPickup.Drop(this);
+        //     currentPickup = null;
+        // }
     }
 
     void CheckUsePickupInput()

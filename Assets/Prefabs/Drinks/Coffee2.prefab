@@ -6464,7 +6464,6 @@ GameObject:
   - component: {fileID: 7786651687344449829}
   - component: {fileID: 873110687314056598}
   - component: {fileID: 7005958735107340530}
-  - component: {fileID: 6859723200752092405}
   m_Layer: 3
   m_Name: Coffee2
   m_TagString: Highlightable
@@ -6538,22 +6537,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15501526, y: 0.45887157, z: 0.15419726}
   m_Center: {x: -0.012492374, y: -0.024435803, z: 0.09790137}
---- !u!114 &6859723200752092405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7753574543274525449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4501074aa1fefaf4cbb98caf7ffea56d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupRigidbody: {fileID: 873110687314056598}
-  pickupCollider: {fileID: 7005958735107340530}
-  pickupPositionOffset: {x: -0.1, y: 0.13, z: -0.279}
-  itemID: Coffee2
 --- !u!1 &9199568623294321052
 GameObject:
   m_ObjectHideFlags: 0
