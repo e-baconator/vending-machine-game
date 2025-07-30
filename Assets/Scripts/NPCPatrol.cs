@@ -14,6 +14,7 @@ public class NPCPatrol : MonoBehaviour
 
     void Start()
     {
+        speed = Random.Range(2f, 6f);
         target = pointB.position;
         meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.enabled = true;

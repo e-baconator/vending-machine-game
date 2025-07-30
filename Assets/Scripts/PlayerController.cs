@@ -7,6 +7,11 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private HappinessBarUI happinessBar;
     [SerializeField] TMPro.TextMeshProUGUI warningText;
+    [SerializeField] VMStatus vmStatus1;
+    [SerializeField] VMStatus vmStatus2;
+    [SerializeField] VMStatus vmStatus3;
+    [SerializeField] VMStatus vmStatus4;
+    [SerializeField] VMStatus vmStatus5;
     public float Happiness, MaxHappiness;
     private List<string> collisionMessages = new List<string>() { "HEY, WATCH IT.", "WHAT DO YOU THINK YOU'RE DOING?", "GET OUT OF MY WAY." , "UGH, WHY ARE YOU HERE?"};
     void Start()
@@ -20,6 +25,14 @@ public class PlayerController : MonoBehaviour
         if (Time.frameCount % 500 == 0)
         {
             SetHappiness(-1f);
+        }
+        if (vmStatus1.isComplete && vmStatus2.isComplete && vmStatus3.isComplete && vmStatus4.isComplete && vmStatus5.isComplete)
+        {
+            FindFirstObjectByType<GameWonManagerScript>().TriggerGameWon();
+        }
+        if (Happiness == 0)
+        {
+            FindFirstObjectByType<GameOverManager>().TriggerGameOver();
         }
     }
 

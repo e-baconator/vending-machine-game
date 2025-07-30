@@ -7,9 +7,10 @@ public class VMStatus : MonoBehaviour
     [SerializeField] GameObject incomplete;
     [SerializeField] PlayerController playerController;
 
-    private bool isComplete = false;
+    public bool isComplete = false;
     void Start()
     {
+        isComplete = false;
         complete.SetActive(false);
         incomplete.SetActive(true);
     }

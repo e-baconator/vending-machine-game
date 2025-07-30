@@ -27,7 +27,7 @@ public class InteractableShelves : MonoBehaviour
     {
         foreach (Transform shelf in shelves)
         {
-            if (shelf.childCount < 1)
+            if (shelf.childCount < 4)
             {
                 return;
             }
