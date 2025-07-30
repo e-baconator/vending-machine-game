@@ -101449,6 +101449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VMStatus
       objectReference: {fileID: 0}
+    - target: {fileID: 6170769111853411208, guid: c29368e068d508249bedd564698f2c41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
