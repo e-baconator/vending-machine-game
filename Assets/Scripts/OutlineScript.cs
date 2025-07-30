@@ -16,6 +16,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -47,11 +48,12 @@ public class OutlineSelection : MonoBehaviour
             highlight.gameObject.GetComponent<Outline>().enabled = false;
             highlight = null;
         }
+
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit, rayDistance, layerMask))
         {
             highlight = raycastHit.transform;
-            if (highlight.CompareTag("Highlightable") || highlight.CompareTag("Box"))
+            if (highlight.CompareTag("Highlightable"))
             {
                 Outline outline = highlight.GetComponent<Outline>();
                 if (outline == null)
