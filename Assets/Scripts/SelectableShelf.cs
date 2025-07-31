@@ -31,28 +31,6 @@ public class SelectableShelf : MonoBehaviour, ISelectable
 
     public void Use()
     {
-        // if (numBottles > 0 && pickupHolder.childCount == 0)
-        // {
-        //     Transform bottle = transform.GetChild(numBottles - 1);
-        //     bottle.parent = null;
-        //     bottle.GetComponent<PhysicsPickup>().Grab(pickupHolder.GetComponentInParent<PickupController>());
-        //     numBottles = numBottles - 1;
-        // }
-        // else if (!GetItemID().Equals(pickupHolder.GetChild(0).GetComponent<IPickupable>().GetItemID()))
-        // {
-        //     StartCoroutine(ShowWarningText("Wrong shelf for this bottle."));
-        // }
-        // else if (numBottles < bottleCapacity && pickupHolder.childCount != 0)
-        // {
-        //     SetChildPosition(pickupHolder.GetChild(0));
-        //     pickupHolder.GetComponentInParent<PickupController>().RemovePickup();
-        //     numBottles = numBottles + 1;
-        // }
-        // else if (numBottles == bottleCapacity && pickupHolder.childCount != 0)
-        // {
-        //     StartCoroutine(ShowWarningText("This shelf is full."));
-        // }
-
         Transform box;
 
         if (pickupHolder.childCount == 0) // no box held
