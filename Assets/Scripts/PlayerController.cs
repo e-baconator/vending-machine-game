@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         happinessBar.SetMaxHappiness(MaxHappiness);
         warningText.text = string.Empty;
+        //Cursor.visible = false;
     }
 
     void Update()
