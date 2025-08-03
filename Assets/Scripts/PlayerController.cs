@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         happinessBar.SetMaxHappiness(MaxHappiness);
         warningText.text = string.Empty;
-        Cursor.visible = false;
+        //Cursor.visible = false;
     }
 
     void Update()
