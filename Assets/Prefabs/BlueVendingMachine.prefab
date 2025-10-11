@@ -47579,6 +47579,7 @@ MonoBehaviour:
   complete: {fileID: 5086280328117882415}
   incomplete: {fileID: 358249815661825262}
   playerController: {fileID: 0}
+  isComplete: 0
 --- !u!1 &7414389211099879625
 GameObject:
   m_ObjectHideFlags: 0
